@@ -1,0 +1,13 @@
+<-Volver al inicio,,,,,,,,,,,,,,,,,,,
+Entidad,DetalleCompra,,,,,,,,,,,,,,,,,,
+Desripción,Clase que representa los productos que forman parte de una compra.,,,,,,,,,,,,,,,,,,
+Atributos,,,,,,,,,,,,,,,,,,,
+Nombre,Tipo de dato,Longitud,Cantidad dígitos parte entera,Cantidad dígitos parte decimal (Precisión),¿Es autoincremento?,¿Es obligatorio?,¿Es llave primeria o es parte de ella?,Llave Foránea,,,Restricciones de unicidad,,Restricciones de chequeo,,Restricciones de índice,,,Alias,Descripción del campo
+,,,,,,,,¿Es llave foránea?,Entidad,Columna(s),¿Posee restricción de unicidad o es parte de ella?,Nombre restricción unicidad a la que pertenece,¿Posee restricción de chequeo o es parte de ella?,Nombre restricción chequeo a la que pertenece,¿Posee restricción de índice o es parte de ella?,Tipo,Nombre restricción índice a la que pertenece,,
+id,Alfanumerico,36,No aplica,No aplica,NO,SI,SI,NO,,,NO,,NO,,NO,,NO,,
+Compra_id,Alfanumerico,36,No aplica,No aplica,NO,SI,NO,SI,,,NO,,NO,,NO,,NO,,
+productoId ,Alfanumerico,100,No aplica,No aplica,NO,SI,NO,SI,,,NO,,NO,,NO,,NO,,
+cantidad ,Numérico Entero,999,No aplica,No aplica,NO,SI,NO,NO,,,NO,,NO,,NO,,NO,,
+precioUnitario ,Numérico Decimal,"999999999,99",No aplica,No aplica,NO,SI,NO,NO,,,NO,,NO,,NO,,NO,,
+UltimaActualizacion,Fecha,10,No aplica,No aplica,NO,SI,NO,NO,,,NO,,NO,,NO,,NO,,
+paisTransaccionId ,Alfanumerico,36,No aplica,No aplica,NO,SI,NO,SI,,,NO,,NO,,NO,,NO,,
