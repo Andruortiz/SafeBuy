@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Email</label>
+    <input formControlName="email" type="email" />
+    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+      Ingresa un correo válido.
+    </div>
+  </div>
+
+  <div>
+    <label>Contraseña</label>
+    <input formControlName="password" type="password" />
+    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+      Mínimo 6 caracteres.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid">Ingresar</button>
+</form>
