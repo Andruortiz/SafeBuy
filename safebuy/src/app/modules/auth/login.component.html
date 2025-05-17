@@ -2,6 +2,18 @@
   <h2>Iniciar sesión</h2>
 
   <form (ngSubmit)="login()">
+    <label>Rol:</label>
+    <div>
+      <label>
+        <input type="radio" name="role" [(ngModel)]="selectedRole" [value]="'comprador'" />
+        Comprador
+      </label>
+      <label>
+        <input type="radio" name="role" [(ngModel)]="selectedRole" [value]="'vendedor'" />
+        Vendedor
+      </label>
+    </div>
+
     <label for="email">Correo electrónico</label>
     <input type="email" [(ngModel)]="email" name="email" required />
 
