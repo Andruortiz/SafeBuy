@@ -1,0 +1,29 @@
+.register-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  h2 {
+    text-align: center;
+  }
+
+  input, button {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .error {
+    color: red;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .success {
+    color: green;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

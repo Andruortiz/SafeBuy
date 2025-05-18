@@ -1,11 +1,53 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+  name = '';
+  email = '';
+  password = '';
+  role: 'comprador' | 'vendedor' | null = null;
+  errorMessage = '';
+  successMessage = '';
 
+  constructor(private router: Router) {}
+
+  register() {
+    if (!this.name || !this.email || !this.password || !this.role) {
+      this.errorMessage = 'Todos los campos son obligatorios.';
+      return;
+    }
+
+    const newUser = {
+      name: this.name,
+      email: this.email,
+      password: this.password,
+      role: this.role
+    };
+
+    // Guardar en localStorage (puede expandirse a backend luego)
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+
+    this.successMessage = 'Registro exitoso. Ahora puedes iniciar sesión.';
+    this.errorMessage = '';
+
+    // Limpia el formulario
+    this.name = '';
+    this.email = '';
+    this.password = '';
+    this.role = null;
+
+    // Redirige al login después de unos segundos
+    setTimeout(() => this.router.navigateByUrl('/auth/login'), 1500);
+  }
 }

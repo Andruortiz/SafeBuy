@@ -1,10 +1,13 @@
 .home-container {
-  text-align: center;
   padding: 3rem;
+  text-align: center;
+  position: relative; // Necesario para posicionar elementos hijos
 
-  button {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
+  .login-button {
+    position: absolute;     // Posicionamiento libre dentro del contenedor
+    top: 1rem;              // Distancia desde arriba
+    right: 1rem;            // Distancia desde la derecha
+    padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
   }

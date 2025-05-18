@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../../services/auth.service'; // Servicio que maneja sesión y roles
+import { AuthService } from '../../services/auth.service';
+import { RouterModule } from '@angular/router';//
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Permite usar [(ngModel)] y *ngIf
+  imports: [CommonModule, FormsModule, RouterModule],
+  // Permite usar [(ngModel)] y *ngIf
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })

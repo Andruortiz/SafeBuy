@@ -21,3 +21,14 @@
     text-align: center;
   }
 }
+
+.register-link {
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
