@@ -18,5 +18,10 @@ export class ProfileComponent {
     this.userEmail = this.auth.getUser();
     this.role = this.auth.getRole();
   }
-}
 
+  // ✅ Este método debe estar DENTRO de la clase
+  logout() {
+    this.auth.logout();
+    window.location.href = '/'; // o usa Router si prefieres navegar sin recargar
+  }
+}
