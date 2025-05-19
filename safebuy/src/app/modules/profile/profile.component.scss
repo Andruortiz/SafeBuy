@@ -1,0 +1,23 @@
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+
+  h2, h3 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0.5rem 0;
+
+      a {
+        color: #007bff;
+        text-decoration: underline;
+      }
+    }
+  }
+}

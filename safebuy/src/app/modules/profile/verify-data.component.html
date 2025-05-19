@@ -1,1 +1,24 @@
-<p>verify-data works!</p>
+<div class="verify-container">
+  <h2>Verificar identidad</h2>
+
+  <form (ngSubmit)="verify()">
+    <label>Nombre completo</label>
+    <input type="text" [(ngModel)]="fullName" name="fullName" required />
+
+    <label>Número de documento</label>
+    <input type="text" [(ngModel)]="idNumber" name="idNumber" required />
+
+    <label>Teléfono</label>
+    <input type="tel" [(ngModel)]="phone" name="phone" required />
+
+    <button type="submit">Verificar</button>
+  </form>
+
+  <div *ngIf="submitted && verified" class="success">
+    ✅ Identidad verificada correctamente.
+  </div>
+
+  <div *ngIf="submitted && !verified" class="error">
+    ❌ Por favor completa todos los campos.
+  </div>
+</div>
