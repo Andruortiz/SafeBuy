@@ -20,7 +20,7 @@ export class LoginComponent {
   selectedRole: 'comprador' | 'vendedor' | null = null; // Rol seleccionado
   errorMessage = ''; // Para mostrar errores en pantalla
 
-  constructor(private router: Router, private auth: AuthService) {}
+  constructor(    private router: Router, private auth: AuthService) {}
 
   login() {
     // Validación: todos los campos deben estar completos
@@ -29,18 +29,23 @@ export class LoginComponent {
       return;
     }
 
-    // Simulación de credenciales válidas
-    const validCreds =
-      (this.email === 'cliente@demo.com' && this.password === '1234' && this.selectedRole === 'comprador') ||
-      (this.email === 'vendedor@demo.com' && this.password === '1234' && this.selectedRole === 'vendedor');
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
 
-    if (validCreds) {
-      // Guardamos usuario y rol usando el AuthService
-      this.auth.login(this.email, this.selectedRole);
-      this.router.navigateByUrl('/'); // Redireccionamos al inicio
+    const matchedUser = users.find(
+      (user: any) =>
+        user.email === this.email &&
+        user.password === this.password &&
+        user.role === this.selectedRole
+    );
+
+
+    if (matchedUser) {
+      this.auth.login(matchedUser.email, matchedUser.role);
+      this.router.navigateByUrl('/');
     } else {
       this.errorMessage = 'Credenciales o rol incorrectos';
     }
+
   }
 }
 

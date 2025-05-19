@@ -1,6 +1,18 @@
-<div class="home-container">
-  <button class="login-button" routerLink="/auth/login">Iniciar sesión</button>
+<div class="home-header">
+  <h1>Catálogo general de productos</h1>
 
-  <h1>Bienvenido a SafeBuy</h1>
-  <p>Tu plataforma de compras seguras</p>
+  <div class="home-button">
+    <button *ngIf="!auth.isAuthenticated()" (click)="goToLogin()">Iniciar sesión</button>
+    <button *ngIf="auth.isAuthenticated()" (click)="goToProfile()">Mi perfil</button>
+  </div>
+</div>
+
+<hr />
+
+<!-- Simulación del catálogo general -->
+<div class="product-list">
+  <div class="product-card" *ngFor="let product of [1,2,3,4,5]">
+    <h3>Producto {{ product }}</h3>
+    <p>Descripción de ejemplo del producto {{ product }}</p>
+  </div>
 </div>

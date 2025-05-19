@@ -1,14 +1,24 @@
-.home-container {
-  padding: 3rem;
-  text-align: center;
-  position: relative; // Necesario para posicionar elementos hijos
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 
-  .login-button {
-    position: absolute;     // Posicionamiento libre dentro del contenedor
-    top: 1rem;              // Distancia desde arriba
-    right: 1rem;            // Distancia desde la derecha
+  .home-button button {
     padding: 0.5rem 1rem;
-    font-size: 1rem;
     cursor: pointer;
+  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+
+  .product-card {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
   }
 }

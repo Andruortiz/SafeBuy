@@ -1,26 +1,31 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' // 👈 Esto hace que el servicio esté disponible globalmente
 })
 export class AuthService {
-  private readonly KEY = 'user';
-
-  login(email: string, role: 'comprador' | 'vendedor') {
+  login(email: string, role: string) {
     localStorage.setItem('user', email);
     localStorage.setItem('role', role);
   }
 
-
   logout() {
-    localStorage.removeItem(this.KEY);
+    localStorage.removeItem('user');
+    localStorage.removeItem('role');
   }
 
   isAuthenticated(): boolean {
-    return localStorage.getItem(this.KEY) !== null;
+    // Solo retorna true si 'user' y 'role' existen y no están vacíos
+    const user = localStorage.getItem('user');
+    const role = localStorage.getItem('role');
+    return !!user && !!role;
+  }
+
+  getRole(): string | null {
+    return localStorage.getItem('role');
   }
 
   getUser(): string | null {
-    return localStorage.getItem(this.KEY);
+    return localStorage.getItem('user');
   }
 }
