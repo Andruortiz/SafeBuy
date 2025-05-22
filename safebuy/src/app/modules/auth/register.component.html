@@ -1,5 +1,5 @@
 <div class="register-container">
-  <h2>Registro</h2>
+  <h2>Regístrate en <span class="highlight">SafeBuy</span></h2>
 
   <form (ngSubmit)="register()">
     <label>Nombre completo</label>
@@ -12,7 +12,7 @@
     <input type="password" [(ngModel)]="password" name="password" required />
 
     <label>Rol</label>
-    <div>
+    <div class="role-selection">
       <label><input type="radio" name="role" [(ngModel)]="role" value="comprador" /> Comprador</label>
       <label><input type="radio" name="role" [(ngModel)]="role" value="vendedor" /> Vendedor</label>
     </div>

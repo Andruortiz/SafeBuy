@@ -33,7 +33,6 @@ export class RegisterComponent {
       role: this.role
     };
 
-    // Guardar en localStorage (puede expandirse a backend luego)
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
@@ -41,13 +40,11 @@ export class RegisterComponent {
     this.successMessage = 'Registro exitoso. Ahora puedes iniciar sesión.';
     this.errorMessage = '';
 
-    // Limpia el formulario
     this.name = '';
     this.email = '';
     this.password = '';
     this.role = null;
 
-    // Redirige al login después de unos segundos
     setTimeout(() => this.router.navigateByUrl('/auth/login'), 1500);
   }
 }

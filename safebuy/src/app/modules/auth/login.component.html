@@ -1,9 +1,9 @@
 <div class="login-container">
-  <h2>Iniciar sesión</h2>
+  <h2>Inicia sesión en <span class="brand">SafeBuy</span></h2>
 
   <form (ngSubmit)="login()">
     <label>Rol:</label>
-    <div>
+    <div class="role-selector">
       <label>
         <input type="radio" name="role" [(ngModel)]="selectedRole" [value]="'comprador'" />
         Comprador
@@ -27,5 +27,5 @@
     </p>
 
     <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
-  </form>
+      </form>
 </div>
