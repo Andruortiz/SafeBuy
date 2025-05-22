@@ -13,9 +13,11 @@ public class Pais {
 
     private String codigoISO = ""; // Valor vacío por defecto
 
-    @OneToOne
-    private Moneda moneda = new Moneda(); // Instancia por defecto, NO null
-
+   @OneToOne(cascade = CascadeType.ALL)
+   @JoinColumn(name = "moneda_id", referencedColumnName = "id")
+    
+    private Moneda moneda = new Moneda();
+    
     private String activoTransaccion = "no confirmado"; // Valor inicial definido
 
     // ------------------------

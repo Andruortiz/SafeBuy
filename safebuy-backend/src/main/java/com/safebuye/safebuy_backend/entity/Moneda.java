@@ -14,7 +14,7 @@ public class Moneda {
     private String nombre = "";  // Nunca null
 
     @OneToOne(mappedBy = "moneda")
-    private Pais pais = new Pais();  // Nunca null
+    private Pais pais = new Pais(); // Relación gestionada por Pais
 
     // ------------------------
     // Constructores
