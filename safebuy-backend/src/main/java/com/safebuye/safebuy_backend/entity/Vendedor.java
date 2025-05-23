@@ -1,6 +1,7 @@
 package com.safebuye.safebuy_backend.entity;
 
 import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,45 +12,47 @@ public class Vendedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id = 0L;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "detalle_id", referencedColumnName = "id")
-    private DetalleVendedor detalleVendedor = new DetalleVendedor(); // Nunca null
+    private String nombre = "";
 
     @OneToMany(mappedBy = "vendedor", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Producto> productos = new ArrayList<>(); // Nunca null
+    private List<VendedorProducto> productosVendedor = new ArrayList<>();
 
     // ------------------------
     // Constructores
     // ------------------------
 
     public Vendedor() {
-        this.detalleVendedor = new DetalleVendedor();
-        this.productos = new ArrayList<>();
+        this.nombre = "";
+        this.productosVendedor = new ArrayList<>();
     }
 
-    public Vendedor(DetalleVendedor detalleVendedor, List<Producto> productos) {
-        this.detalleVendedor = (detalleVendedor != null) ? detalleVendedor : new DetalleVendedor();
-        this.productos = (productos != null) ? productos : new ArrayList<>();
+    public Vendedor(String nombre) {
+        this.nombre = (nombre != null) ? nombre : "";
+        this.productosVendedor = new ArrayList<>();
     }
 
     // ------------------------
     // Getters y Setters
     // ------------------------
 
-    public DetalleVendedor getDetalleVendedor() {
-        return detalleVendedor;
+    public Long getId() {
+        return id;
     }
 
-    public void setDetalleVendedor(DetalleVendedor detalleVendedor) {
-        this.detalleVendedor = (detalleVendedor != null) ? detalleVendedor : new DetalleVendedor();
+    public String getNombre() {
+        return nombre;
     }
 
-    public List<Producto> getProductos() {
-        return productos;
+    public void setNombre(String nombre) {
+        this.nombre = (nombre != null) ? nombre : "";
     }
 
-    public void setProductos(List<Producto> productos) {
-        this.productos = (productos != null) ? productos : new ArrayList<>();
+    public List<VendedorProducto> getProductosVendedor() {
+        return productosVendedor;
+    }
+
+    public void setProductosVendedor(List<VendedorProducto> productosVendedor) {
+        this.productosVendedor = (productosVendedor != null) ? productosVendedor : new ArrayList<>();
     }
 
     // ------------------------
@@ -57,12 +60,12 @@ public class Vendedor {
     // ------------------------
 
     public void hacerAlgo() {
-        System.out.println("El vendedor está realizando una acción...");
+        System.out.println("Lógica de vendedor ejecutada...");
     }
 
     public static String imprimirAlgo(String texto) {
         if (texto == null || texto.isBlank()) {
-            return "El valor recibido es inválido.";
+            return "Valor inválido para imprimir.";
         }
         return "Impresión: " + texto;
     }
