@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 @Entity
 public class Categoria {
@@ -72,10 +75,7 @@ public class Categoria {
     // Métodos funcionales
     // ------------------------
 
-    public void hacerAlgo() {
-        System.out.println("Categoria ejecutando lógica...");
-    }
-
+    private static final Logger logger = LoggerFactory.getLogger(Categoria.class);
     public static String imprimirAlgo(String texto) {
         if (texto == null || texto.isBlank()) {
             return "Texto inválido.";
