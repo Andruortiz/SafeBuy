@@ -1,5 +1,8 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class DireccionEntregaDTO {
-    // TODO: Agrega los campos correspondientes a DireccionEntrega aquÃ­
+    private Long id;
+    private String calle;
+    private String ciudad;
+    private String codigoPostal;
 }

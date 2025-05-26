@@ -1,5 +1,9 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
+
+import java.util.List;
 
 public class VendedorDTO {
-    // TODO: Agrega los campos correspondientes a Vendedor aquÃ­
+    private Long id;
+    private Long detalleVendedorId;
+    private List<Long> productosId;
 }

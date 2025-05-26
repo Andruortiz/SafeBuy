@@ -1,5 +1,8 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class InfoReclamoMotivoDTO {
-    // TODO: Agrega los campos correspondientes a InfoReclamoMotivo aquÃ­
+    private Long id;
+    private Long reclamoId;
+    private Long motivoId;
+    private String detalle;
 }

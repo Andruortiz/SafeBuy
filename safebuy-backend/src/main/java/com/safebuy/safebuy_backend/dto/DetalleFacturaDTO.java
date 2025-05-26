@@ -1,5 +1,8 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class DetalleFacturaDTO {
-    // TODO: Agrega los campos correspondientes a DetalleFactura aquÃ­
+    private Long id;
+    private Long facturaId;
+    private String descripcion;
+    private double subtotal;
 }

@@ -1,5 +1,8 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class CiudadDTO {
-    // TODO: Agrega los campos correspondientes a Ciudad aquÃ­
+    private Long id;
+    private String nombre;
+    private String codigoPostal;
+    private String paisId;
 }

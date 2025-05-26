@@ -1,5 +1,7 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class MetodoPagoDTO {
-    // TODO: Agrega los campos correspondientes a MetodoPago aquÃ­
+    private Long id;
+    private String nombre;
+    private boolean activo;
 }

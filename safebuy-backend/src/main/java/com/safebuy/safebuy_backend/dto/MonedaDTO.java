@@ -1,5 +1,8 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class MonedaDTO {
-    // TODO: Agrega los campos correspondientes a Moneda aquÃ­
+    private Long id;
+    private String codigo;
+    private String nombre;
+    private String paisId;
 }

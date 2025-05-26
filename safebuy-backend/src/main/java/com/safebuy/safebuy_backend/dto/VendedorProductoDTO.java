@@ -1,5 +1,8 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class VendedorProductoDTO {
-    // TODO: Agrega los campos correspondientes a VendedorProducto aquÃ­
+    private Long id;
+    private double reputacion;
+    private int ventasTotales;
+    private Long vendedorId;
 }

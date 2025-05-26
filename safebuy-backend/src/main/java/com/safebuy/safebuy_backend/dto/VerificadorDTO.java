@@ -1,5 +1,6 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class VerificadorDTO {
-    // TODO: Agrega los campos correspondientes a Verificador aquÃ­
+    private Long id;
+    private String tipoVerificacion;
 }

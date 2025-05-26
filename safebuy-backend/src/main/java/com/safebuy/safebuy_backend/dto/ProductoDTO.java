@@ -1,5 +1,10 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class ProductoDTO {
-    // TODO: Agrega los campos correspondientes a Producto aquÃ­
+    private Long id;
+    private String nombre;
+    private String descripcion;
+    private Long precioId;
+    private Long vendedorId;
+    private Long categoriaId;
 }

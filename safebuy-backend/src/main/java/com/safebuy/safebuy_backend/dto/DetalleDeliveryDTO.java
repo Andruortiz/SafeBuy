@@ -1,5 +1,9 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class DetalleDeliveryDTO {
-    // TODO: Agrega los campos correspondientes a DetalleDelivery aquÃ­
+    private Long id;
+    private String direccion;
+    private String empresaEnvio;
+    private String estado;
+    private Long compraId;
 }

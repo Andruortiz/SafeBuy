@@ -1,5 +1,9 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class FacturaDTO {
-    // TODO: Agrega los campos correspondientes a Factura aquÃ­
+    private Long id;
+    private String fechaEmision;
+    private Long compraId;
+    private Long metodoPagoId;
+    private Long verificadorId;
 }

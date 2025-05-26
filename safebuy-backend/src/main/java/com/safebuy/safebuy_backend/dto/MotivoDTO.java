@@ -1,5 +1,7 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class MotivoDTO {
-    // TODO: Agrega los campos correspondientes a Motivo aquÃ­
+    private Long id;
+    private String nombre;
+    private boolean activo;
 }

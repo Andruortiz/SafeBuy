@@ -1,5 +1,7 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
 
 public class PrecioDTO {
-    // TODO: Agrega los campos correspondientes a Precio aquÃ­
+    private Long id;
+    private double valor;
+    private Long monedaId;
 }

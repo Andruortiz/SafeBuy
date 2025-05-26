@@ -1,5 +1,11 @@
-﻿package com.safebuy.safebuy_backend.dto;
+package com.safebuy.safebuy_backend.dto;
+
+import java.util.Date;
 
 public class HistorialReclamoDTO {
-    // TODO: Agrega los campos correspondientes a HistorialReclamo aquÃ­
+    private Long id;
+    private Date fechaCambio;
+    private String comentario;
+    private Long reclamoId;
+    private Long estadoReclamoId;
 }
