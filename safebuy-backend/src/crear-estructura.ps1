@@ -17,19 +17,20 @@ $classes = @(
 
 # Crear archivos DTO
 foreach ($class in $classes) {
-    $fileName = "${class}DTO.java"
+    $fileName = "$class" + "DTO.java"
     $filePath = Join-Path -Path $basePath -ChildPath $fileName
 
     $content = @"
 package com.safebuye.safebuy_backend.dto;
 
 public class ${class}DTO {
-    // TODO: Agrega los campos correspondientes a $class aquí
+    // TODO: Agregar los campos necesarios para ${class}DTO
 }
 "@
 
     Set-Content -Path $filePath -Value $content -Encoding UTF8
-    Write-Host "✅ DTO creado: $filePath"
+    Write-Host "DTO creado: $filePath"
 }
 
-
+Write-Host ""
+Write-Host "Todos los archivos DTO fueron generados correctamente en: $basePath"
