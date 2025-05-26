@@ -39,7 +39,7 @@ public class CompraServiceImpl implements CompraService {
                 .map(compra -> {
                     compra.setDetalle(nuevaCompra.getDetalle());
                     compra.setPrecioTotal(nuevaCompra.getPrecioTotal());
-                    compra.setUsuario(nuevaCompra.getUsuario());
+                    compra.setComprador(nuevaCompra.getComprador() );
                     return compraRepository.save(compra);
                 })
                 .orElseThrow(() -> new RuntimeException("Compra no encontrada"));

@@ -16,13 +16,17 @@ public class Factura {
     @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DetalleFactura> detalles = new ArrayList<>();
 
+    @ManyToOne(optional = false)
+    private Compra compra;
+
     public Factura() {
         this.descripcion = "";
     }
 
-    public Factura(String descripcion, List<DetalleFactura> detalles) {
+    public Factura(String descripcion, List<DetalleFactura> detalles, Compra compra) {
         this.descripcion = descripcion;
         this.detalles = detalles;
+        this.compra = compra;
     }
 
     public Long getId() {
@@ -43,5 +47,13 @@ public class Factura {
 
     public void setDetalles(List<DetalleFactura> detalles) {
         this.detalles = detalles;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
     }
 }
