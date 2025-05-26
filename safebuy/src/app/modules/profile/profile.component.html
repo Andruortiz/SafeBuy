@@ -1,31 +1,32 @@
 <div class="profile-container">
-  <h2>Mi perfil</h2>
-  <p><strong>Usuario:</strong> {{ userEmail }}</p>
-  <p><strong>Rol:</strong> {{ role }}</p>
+  <h2 class="title">👤 Mi perfil</h2>
+
+  <div class="user-info">
+    <p><strong>📧 Usuario:</strong> {{ userEmail }}</p>
+    <p><strong>🔐 Rol:</strong> {{ role }}</p>
+  </div>
 
   <hr />
 
-  <!-- Vista para Comprador -->
-  <div *ngIf="role === 'comprador'">
-    <h3>Opciones para Comprador</h3>
+  <div *ngIf="role === 'comprador'" class="options-container">
+    <h3 class="subtitle">🛍️ Opciones para Comprador</h3>
     <ul>
-      <li><a routerLink="/profile/orders">Ver mis compras</a></li>
-      <li><a routerLink="/profile/addresses">Editar direcciones</a></li>
-      <li><a routerLink="/profile/payments">Formas de pago</a></li>
-      <li><a routerLink="/profile/verify">Verificar identidad</a></li>
+      <li><a routerLink="/profile/orders">🧾 Ver mis compras</a></li>
+      <li><a routerLink="/profile/addresses">🏠 Editar direcciones</a></li>
+      <li><a routerLink="/profile/payments">💳 Formas de pago</a></li>
+      <li><a routerLink="/profile/verify">✅ Verificar identidad</a></li>
     </ul>
   </div>
 
-  <!-- Vista para Vendedor -->
-  <div *ngIf="role === 'vendedor'">
-    <h3>Opciones para Vendedor</h3>
+  <div *ngIf="role === 'vendedor'" class="options-container">
+    <h3 class="subtitle">📦 Opciones para Vendedor</h3>
     <ul>
-      <li><a routerLink="/products/my-products">Mis productos</a></li>
-      <li><a routerLink="/products/add">Agregar producto</a></li>
-      <li><a routerLink="/profile/verify">Verificar identidad</a></li>
-      <li><a routerLink="/claims/status">Reclamos recibidos</a></li>
+      <li><a routerLink="/products/my-products">📁 Mis productos</a></li>
+      <li><a routerLink="/products/add">➕ Agregar producto</a></li>
+      <li><a routerLink="/profile/verify">✅ Verificar identidad</a></li>
+      <li><a routerLink="/claims/status">📨 Reclamos recibidos</a></li>
     </ul>
   </div>
+
+  <button (click)="logout()" class="logout-button">Cerrar sesión</button>
 </div>
-<hr />
-<button (click)="logout()" class="logout-button">Cerrar sesión</button>

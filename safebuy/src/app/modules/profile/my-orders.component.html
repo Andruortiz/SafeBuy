@@ -1,1 +1,11 @@
-<p>my-orders works!</p>
+<div class="orders-container">
+  <h2>Mis compras</h2>
+
+  <div class="order-card" *ngFor="let compra of compras">
+    <h3>{{ compra.producto }}</h3>
+    <p><strong>Fecha:</strong> {{ compra.fecha }}</p>
+    <p><strong>Estado:</strong> {{ compra.estado }}</p>
+    <p><strong>Verificado:</strong> {{ compra.verificado ? '✅' : '❌' }}</p>
+    <button *ngIf="!compra.verificado" (click)="verificar(compra.id)">Verificar compra</button>
+  </div>
+</div>
