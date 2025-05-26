@@ -1,1 +1,35 @@
-<p>product-list works!</p>
+<div class="shop-container">
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+    <ul>
+      <li>Electrónica</li>
+      <li>Ropa</li>
+      <li>Hogar</li>
+      <li>Accesorios</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="top-bar">
+      <h1>Catálogo general de productos</h1>
+
+      <div class="actions">
+        <input
+          type="text"
+          placeholder="Buscar productos..."
+          [(ngModel)]="searchTerm"
+        />
+        <button *ngIf="!auth.isAuthenticated()" (click)="goToLogin()">Iniciar sesión</button>
+        <button *ngIf="auth.isAuthenticated()" (click)="goToProfile()">Mi perfil</button>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <img [src]="product.image" alt="Producto" />
+        <h3>{{ product.name }}</h3>
+        <p>$ {{ product.price }}</p>
+      </div>
+    </div>
+  </main>
+</div>
