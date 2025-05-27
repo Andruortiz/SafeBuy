@@ -1,1 +1,8 @@
-<p>product-detail works!</p>
+<div class="product-detail-container" *ngIf="product">
+  <img [src]="product.image" alt="{{ product.title }}" />
+  <h2>{{ product.title }}</h2>
+  <p>{{ product.description }}</p>
+  <p><strong>Precio:</strong> ${{ product.price }}</p>
+  <p><strong>Unidades disponibles:</strong> {{ product.quantity }}</p>
+  <button class="buy-button">Comprar</button>
+</div>

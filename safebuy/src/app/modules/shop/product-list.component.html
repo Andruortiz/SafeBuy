@@ -25,11 +25,15 @@
     </div>
 
     <div class="product-grid">
-      <div class="product-card" *ngFor="let product of filteredProducts">
+      <a
+        class="product-card"
+        *ngFor="let product of filteredProducts"
+        [routerLink]="['/product', product.id]"
+      >
         <img [src]="product.image" alt="Producto" />
         <h3>{{ product.name }}</h3>
         <p>$ {{ product.price }}</p>
-      </div>
+      </a>
     </div>
   </main>
 </div>

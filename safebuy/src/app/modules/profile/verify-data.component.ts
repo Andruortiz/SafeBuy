@@ -10,16 +10,19 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./verify-data.component.scss']
 })
 export class VerifyDataComponent {
-  fullName = '';
-  idNumber = '';
+  email = '';
+  dni = '';
   phone = '';
   verified = false;
   submitted = false;
 
   verify() {
-    if (this.fullName && this.idNumber && this.phone) {
-      this.verified = true;
-    }
     this.submitted = true;
+
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email);
+    const dniValid = /^\d{6,12}$/.test(this.dni); // Por ejemplo: 6 a 12 dígitos
+    const phoneValid = /^\d{10}$/.test(this.phone); // Ejemplo: 10 dígitos para CO
+
+    this.verified = emailValid && dniValid && phoneValid;
   }
 }

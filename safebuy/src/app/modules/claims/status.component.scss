@@ -1,0 +1,27 @@
+.claims-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  color: #f1f1f1;
+}
+
+.claim-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.1);
+}
+
+.revisado {
+  color: orange;
+}
+
+.no-revisado {
+  color: red;
+}
+
+.solucionado {
+  color: green;
+}

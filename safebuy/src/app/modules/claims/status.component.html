@@ -1,1 +1,18 @@
-<p>status works!</p>
+<div class="claims-container">
+  <h2>Reclamos recibidos</h2>
+
+  <div *ngFor="let claim of claims" class="claim-card">
+    <p><strong>🧑 Usuario:</strong> {{ claim.buyer.name }}</p>
+    <p><strong>📧 Correo:</strong> {{ claim.buyer.email }}</p>
+    <p><strong>📞 Teléfono:</strong> {{ claim.buyer.phone }}</p>
+    <p><strong>📦 Producto:</strong> {{ claim.product }}</p>
+    <p><strong>🗓️ Fecha de compra:</strong> {{ claim.date }}</p>
+    <p><strong>🔎 Estado:</strong>
+      <span [ngClass]="{
+        'revisado': claim.state === 'Revisado',
+        'no-revisado': claim.state === 'No revisado',
+        'solucionado': claim.state === 'Solucionado'
+      }">{{ claim.state }}</span>
+    </p>
+  </div>
+</div>

@@ -8,6 +8,10 @@ import { MyOrdersComponent } from './modules/profile/my-orders.component';
 import { AddressesComponent } from './modules/profile/addresses.component';
 import { PaymentMethodsComponent } from './modules/profile/payment-methods.component';
 import { MyProductsComponent } from './modules/products/my-products.component';
+import { AddComponent } from './modules/products/add.component';
+import { VerifyDataComponent } from './modules/profile/verify-data.component';
+import { StatusComponent } from './modules/claims/status.component';
+import { ProductDetailComponent } from './modules/shop/product-detail.component';
 
 export const routes: Routes = [
   { path: '', component: ProductListComponent },
@@ -19,4 +23,9 @@ export const routes: Routes = [
   { path: 'profile/addresses', component: AddressesComponent },
   { path: 'profile/payments', component: PaymentMethodsComponent },
   { path: 'products/my-products', component: MyProductsComponent },
+  { path: 'products/add', component: AddComponent },
+  { path: 'profile/verify', component: VerifyDataComponent },
+  { path: 'claims/status', component: StatusComponent },
+  { path: 'product/:id', component: ProductDetailComponent },
 ];
+
