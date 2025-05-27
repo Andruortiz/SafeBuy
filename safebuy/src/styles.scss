@@ -1,0 +1,32 @@
+/* styles.scss */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* negro suave */
+  color: #e0e0e0; /* texto gris claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Enlaces */
+a {
+  color: #ff4081; /* rosado moderno */
+  text-decoration: none;
+}
+a:hover {
+  color: #ff1744; /* rojo más intenso */
+}

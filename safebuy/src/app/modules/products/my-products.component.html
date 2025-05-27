@@ -1,0 +1,14 @@
+<div class="products-container">
+  <h2>Mis productos publicados</h2>
+  <div *ngIf="myProducts.length === 0">
+    No tienes productos publicados.
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of myProducts">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p><strong>Precio:</strong> ${{ product.price }}</p>
+    </div>
+  </div>
+</div>

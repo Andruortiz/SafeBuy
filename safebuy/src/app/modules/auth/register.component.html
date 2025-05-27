@@ -1,0 +1,25 @@
+<div class="register-container">
+  <h2>Regístrate en <span class="highlight">SafeBuy</span></h2>
+
+  <form (ngSubmit)="register()">
+    <label>Nombre completo</label>
+    <input type="text" [(ngModel)]="name" name="name" required />
+
+    <label>Correo electrónico</label>
+    <input type="email" [(ngModel)]="email" name="email" required />
+
+    <label>Contraseña</label>
+    <input type="password" [(ngModel)]="password" name="password" required />
+
+    <label>Rol</label>
+    <div class="role-selection">
+      <label><input type="radio" name="role" [(ngModel)]="role" value="comprador" /> Comprador</label>
+      <label><input type="radio" name="role" [(ngModel)]="role" value="vendedor" /> Vendedor</label>
+    </div>
+
+    <button type="submit">Registrarse</button>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+  </form>
+</div>

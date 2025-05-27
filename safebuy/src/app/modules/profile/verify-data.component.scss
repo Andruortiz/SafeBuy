@@ -1,0 +1,46 @@
+.verify-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+
+  input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #f06292;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    background-color: #e91e63;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .success {
+    color: #4caf50;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .error {
+    color: #f44336;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

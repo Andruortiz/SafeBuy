@@ -1,0 +1,9 @@
+/* app.component.scss */
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #121212; /* coincide con el body */
+  padding: 1rem;
+  box-sizing: border-box;
+}

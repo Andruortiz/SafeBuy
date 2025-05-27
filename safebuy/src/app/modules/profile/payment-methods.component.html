@@ -1,0 +1,49 @@
+<div class="payment-methods-container">
+  <h2>Formas de Pago</h2>
+
+  <form (ngSubmit)="addPayment()" class="payment-form">
+    <input
+      type="text"
+      placeholder="Número de tarjeta"
+      [(ngModel)]="newPayment.cardNumber"
+      name="cardNumber"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="Nombre del dueño"
+      [(ngModel)]="newPayment.ownerName"
+      name="ownerName"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="Fecha de vencimiento (MM/AA)"
+      [(ngModel)]="newPayment.expirationDate"
+      name="expirationDate"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="CVV"
+      [(ngModel)]="newPayment.cvv"
+      name="cvv"
+      required
+    />
+
+    <button type="submit" [disabled]="!isFormValid()">Guardar método</button>
+  </form>
+
+  <div class="saved-payments" *ngIf="payments.length > 0">
+    <h3>Métodos guardados</h3>
+    <ul>
+      <li *ngFor="let payment of payments; let i = index">
+        {{ payment.cardNumber }} - {{ payment.ownerName }} - {{ payment.expirationDate }}
+        <button (click)="deletePayment(i)">Eliminar</button>
+      </li>
+    </ul>
+  </div>
+</div>

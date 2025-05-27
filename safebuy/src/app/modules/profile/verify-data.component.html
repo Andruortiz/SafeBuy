@@ -1,0 +1,23 @@
+<div class="verify-container">
+  <h2>Verificar identidad</h2>
+
+  <form (ngSubmit)="verify()">
+    <label for="email">Correo electrónico</label>
+    <input type="email" [(ngModel)]="email" name="email" required placeholder="ejemplo@correo.com"/>
+
+    <label for="dni">Número de documento (DNI)</label>
+    <input type="text" [(ngModel)]="dni" name="dni" required placeholder="123456789" />
+
+    <label for="phone">Número de teléfono</label>
+    <input type="tel" [(ngModel)]="phone" name="phone" required placeholder="3001234567"/>
+
+    <button type="submit">Verificar</button>
+  </form>
+
+  <div *ngIf="submitted && verified" class="success">
+    ✅ Identidad verificada correctamente.
+  </div>
+  <div *ngIf="submitted && !verified" class="error">
+    ❌ Por favor completa los datos correctamente.
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="orders-container">
+  <h2>Mis compras</h2>
+
+  <div *ngFor="let order of orders" class="order-card">
+    <h3>{{ order.product }}</h3>
+    <p><strong>Fecha:</strong> {{ order.date }}</p>
+    <p><strong>Estado:</strong> {{ order.status }}</p>
+    <p><strong>Verificado:</strong> {{ order.verified ? '✅' : '❌' }}</p>
+
+    <button *ngIf="!order.verified" class="verify-button" (click)="verifyOrder(order)">
+      Verificar compra
+    </button>
+    <button class="claim-button" (click)="makeClaim(order.id)">
+      Hacer un reclamo
+    </button>
+  </div>
+</div>

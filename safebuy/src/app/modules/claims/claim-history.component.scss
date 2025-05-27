@@ -1,0 +1,30 @@
+.claim-history-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+
+  h2 {
+    color: #ff2e7e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .claim-card {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(255, 46, 126, 0.1);
+
+    p {
+      margin: 0.4rem 0;
+      strong {
+        color: #f06292;
+      }
+    }
+  }
+}

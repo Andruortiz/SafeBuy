@@ -1,0 +1,34 @@
+<div class="profile-container">
+  <h2 class="title">👤 Mi perfil</h2>
+
+  <div class="user-info">
+    <p><strong>📧 Usuario:</strong> {{ userEmail }}</p>
+    <p><strong>🔐 Rol:</strong> {{ role }}</p>
+  </div>
+
+  <hr />
+
+  <div *ngIf="role === 'comprador'" class="options-container">
+    <h3 class="subtitle">🛍️ Opciones para Comprador</h3>
+    <ul>
+      <li><a routerLink="/profile/orders">🧾 Ver mis compras</a></li>
+      <li><a routerLink="/profile/addresses">🏠 Editar direcciones</a></li>
+      <li><a routerLink="/profile/payments">💳 Formas de pago</a></li>
+      <li><a routerLink="/profile/verify">✅ Verificar identidad</a></li>
+      <li><a routerLink="/claims/history">🗂️ Historial de reclamos</a></li>
+      <li><a routerLink="/">🏠 Ir al catálogo principal</a></li>
+    </ul>
+  </div>
+
+  <div *ngIf="role === 'vendedor'" class="options-container">
+    <h3 class="subtitle">📦 Opciones para Vendedor</h3>
+    <ul>
+      <li><a routerLink="/products/my-products">📁 Mis productos</a></li>
+      <li><a routerLink="/products/add">➕ Agregar producto</a></li>
+      <li><a routerLink="/profile/verify">✅ Verificar identidad</a></li>
+      <li><a routerLink="/claims/status">📨 Reclamos recibidos</a></li>
+    </ul>
+  </div>
+
+  <button (click)="logout()" class="logout-button">Cerrar sesión</button>
+</div>

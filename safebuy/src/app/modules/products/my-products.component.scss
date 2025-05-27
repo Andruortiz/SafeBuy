@@ -1,0 +1,33 @@
+.products-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+  color: #fff;
+
+  h2 {
+    color: #e91e63;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 0, 150, 0.1);
+
+  h3 {
+    color: #ff4081;
+  }
+
+  p {
+    color: #ccc;
+  }
+}

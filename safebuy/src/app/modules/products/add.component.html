@@ -1,0 +1,32 @@
+<div class="add-product-container">
+  <h2>Agregar producto</h2>
+
+  <form (ngSubmit)="addProduct()" class="add-product-form">
+    <label for="title">Título</label>
+    <input type="text" id="title" [(ngModel)]="product.title" name="title" required />
+
+    <label for="description">Descripción</label>
+    <textarea id="description" [(ngModel)]="product.description" name="description" required></textarea>
+
+    <label for="price">Precio</label>
+    <input type="number" id="price" [(ngModel)]="product.price" name="price" required />
+
+    <label for="quantity">Unidades disponibles</label>
+    <input type="number" id="quantity" [(ngModel)]="product.quantity" name="quantity" required />
+
+    <label for="category">Categoría</label>
+    <select id="category" [(ngModel)]="product.category" name="category" required>
+      <option value="" disabled selected>Selecciona una categoría</option>
+      <option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+    </select>
+
+    <label for="image">Imagen del producto</label>
+    <input type="file" (change)="onImageChange($event)" accept="image/*" />
+
+    <div *ngIf="product.imagePreview" class="preview">
+      <img [src]="product.imagePreview" alt="Vista previa" />
+    </div>
+
+    <button type="submit" [disabled]="!isValidForm()">Agregar producto</button>
+  </form>
+</div>

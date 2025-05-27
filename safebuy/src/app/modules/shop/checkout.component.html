@@ -1,0 +1,56 @@
+<div class="checkout-container" *ngIf="product">
+  <div class="product-summary">
+    <img [src]="product.image" alt="Producto" class="product-img" />
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.description }}</p>
+    <p><strong>Precio:</strong> ${{ product.price }}</p>
+    <label>
+      <strong>Cantidad:</strong>
+      <input type="number" [(ngModel)]="quantity" min="1" [max]="product.quantity" />
+    </label>
+  </div>
+
+  <hr />
+
+  <div class="payment-methods">
+    <h3>Selecciona un método de pago</h3>
+    <label><input type="radio" name="paymentOption" value="saved" [(ngModel)]="paymentOption" /> Usar método guardado</label>
+    <label><input type="radio" name="paymentOption" value="new" [(ngModel)]="paymentOption" /> Ingresar nuevo método de pago</label>
+
+    <div *ngIf="paymentOption === 'saved'">
+      <h4>Métodos guardados</h4>
+      <div *ngFor="let method of savedPayments">
+        **** **** **** {{ method.cardNumber.slice(-4) }} - {{ method.ownerName }} - {{ method.expirationDate }}
+        <button (click)="selectPayment(method)">Pagar con este</button>
+      </div>
+    </div>
+
+    <div *ngIf="paymentOption === 'new'">
+      <input type="text" placeholder="Número de tarjeta" [(ngModel)]="newPayment.cardNumber" />
+      <input type="text" placeholder="Nombre del dueño" [(ngModel)]="newPayment.ownerName" />
+      <input type="text" placeholder="Fecha de vencimiento (MM/AA)" [(ngModel)]="newPayment.expirationDate" />
+      <input type="text" placeholder="CVV" [(ngModel)]="newPayment.cvv" />
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="address-section">
+    <h3>Dirección de entrega</h3>
+    <label><input type="radio" name="addressOption" value="saved" [(ngModel)]="addressOption" /> Usar dirección guardada</label>
+    <label><input type="radio" name="addressOption" value="new" [(ngModel)]="addressOption" /> Ingresar nueva dirección</label>
+
+    <div *ngIf="addressOption === 'saved'">
+      <select [(ngModel)]="selectedAddress">
+        <option *ngFor="let addr of savedAddresses" [value]="addr">{{ addr }}</option>
+      </select>
+    </div>
+
+    <div *ngIf="addressOption === 'new'">
+      <input type="text" placeholder="Nueva dirección" [(ngModel)]="newAddress" />
+    </div>
+  </div>
+
+  <hr />
+  <button (click)="confirmPurchase()" [disabled]="!canPurchase()">Confirmar compra</button>
+</div>

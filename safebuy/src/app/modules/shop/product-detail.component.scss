@@ -1,0 +1,34 @@
+.product-detail-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: #1f1f1f;
+  border-radius: 12px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    color: #ff4081;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+  }
+
+  .buy-button {
+    margin-top: 1rem;
+    background: #ff4081;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
