@@ -2,12 +2,14 @@ package com.safebuy.safebuy_backend.entity;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 public class Motivo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private String nombre;
 
@@ -23,7 +25,7 @@ public class Motivo {
         this.activo = activo;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

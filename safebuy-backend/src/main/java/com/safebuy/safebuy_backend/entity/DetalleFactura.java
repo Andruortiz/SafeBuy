@@ -2,13 +2,14 @@ package com.safebuy.safebuy_backend.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Entity
 public class DetalleFactura {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private String concepto;
     private int cantidad;
@@ -30,7 +31,7 @@ public class DetalleFactura {
         this.factura = factura;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

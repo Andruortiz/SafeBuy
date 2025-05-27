@@ -3,13 +3,14 @@ package com.safebuy.safebuy_backend.entity;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 public class Vendedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "detalle_id", referencedColumnName = "id")
@@ -28,7 +29,7 @@ public class Vendedor {
         this.productos = productos;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

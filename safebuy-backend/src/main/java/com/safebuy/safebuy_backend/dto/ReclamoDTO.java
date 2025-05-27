@@ -1,9 +1,11 @@
 package com.safebuy.safebuy_backend.dto;
 
+import java.util.UUID;
+
 public class ReclamoDTO {
-    private Long id;
+    private UUID id;
     private String motivo;
     private String estado;
     private String respuesta;
-    private Long compraId;
+    private UUID compraId;
 }

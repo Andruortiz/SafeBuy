@@ -2,12 +2,14 @@ package com.safebuy.safebuy_backend.entity;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 public class VendedorProducto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private double reputacion;
     private int ventasTotales;
@@ -22,7 +24,7 @@ public class VendedorProducto {
         this.ventasTotales = ventasTotales;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

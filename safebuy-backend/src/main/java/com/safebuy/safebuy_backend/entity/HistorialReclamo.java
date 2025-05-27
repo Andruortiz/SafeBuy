@@ -2,13 +2,14 @@ package com.safebuy.safebuy_backend.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 public class HistorialReclamo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private LocalDate fechaCambio;
 
@@ -32,7 +33,7 @@ public class HistorialReclamo {
         this.estado = estado;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
