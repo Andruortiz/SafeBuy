@@ -4,5 +4,6 @@
   <p>{{ product.description }}</p>
   <p><strong>Precio:</strong> ${{ product.price }}</p>
   <p><strong>Unidades disponibles:</strong> {{ product.quantity }}</p>
-  <button class="buy-button">Comprar</button>
+
+  <button class="buy-button" (click)="goToCheckout()">Comprar</button>
 </div>

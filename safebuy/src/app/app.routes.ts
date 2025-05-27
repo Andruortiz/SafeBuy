@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home.component';
 import { LoginComponent } from './modules/auth/login.component';
 import { RegisterComponent } from './modules/auth/register.component';
 import { ProfileComponent } from './modules/profile/profile.component';
@@ -12,6 +11,8 @@ import { AddComponent } from './modules/products/add.component';
 import { VerifyDataComponent } from './modules/profile/verify-data.component';
 import { StatusComponent } from './modules/claims/status.component';
 import { ProductDetailComponent } from './modules/shop/product-detail.component';
+import { CheckoutComponent } from './modules/shop/checkout.component';
+import { CreateComponent } from './modules/claims/create.component';
 
 export const routes: Routes = [
   { path: '', component: ProductListComponent },
@@ -27,5 +28,7 @@ export const routes: Routes = [
   { path: 'profile/verify', component: VerifyDataComponent },
   { path: 'claims/status', component: StatusComponent },
   { path: 'product/:id', component: ProductDetailComponent },
+  { path: 'shop/checkout', component: CheckoutComponent },
+  { path: 'claims/create', component: CreateComponent },
 ];
 

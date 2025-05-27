@@ -1,0 +1,50 @@
+.checkout-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+
+  h2, h3 {
+    margin-bottom: 1rem;
+    color: #ff4081;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+
+  .payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  button {
+    padding: 0.6rem 1.2rem;
+    background-color: #e91e63;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #999;
+      cursor: not-allowed;
+    }
+  }
+
+  .saved-payment-list ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+}

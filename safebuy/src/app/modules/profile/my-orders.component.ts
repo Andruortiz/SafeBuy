@@ -1,35 +1,40 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-orders',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './my-orders.component.html',
   styleUrls: ['./my-orders.component.scss']
 })
 export class MyOrdersComponent {
-  compras = [
+  orders = [
     {
       id: 1,
-      producto: 'Mouse inalámbrico',
-      fecha: '2025-05-20',
-      estado: 'En camino',
-      verificado: false
+      product: 'Producto A',
+      date: '2024-05-10',
+      status: 'En camino',
+      verified: false
     },
     {
       id: 2,
-      producto: 'Teclado mecánico',
-      fecha: '2025-05-18',
-      estado: 'Entregado',
-      verificado: true
+      product: 'Producto B',
+      date: '2024-05-05',
+      status: 'Entregado',
+      verified: true
     }
   ];
 
-  verificar(compraId: number) {
-    const compra = this.compras.find(c => c.id === compraId);
-    if (compra) {
-      compra.verificado = true;
-    }
+  constructor(private router: Router) {}
+
+  verifyOrder(order: any) {
+    order.verified = true;
+    alert(`Compra de ${order.product} verificada.`);
+  }
+
+  makeClaim(orderId: number) {
+    this.router.navigate(['/claims/create'], { queryParams: { orderId } });
   }
 }

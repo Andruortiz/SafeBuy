@@ -1,1 +1,35 @@
-<p>checkout works!</p>
+<div class="checkout-container">
+  <h2>Selecciona un método de pago</h2>
+
+  <div class="payment-options">
+    <label>
+      <input type="radio" name="option" value="saved" [(ngModel)]="selectedOption" />
+      Usar método guardado
+    </label>
+    <label>
+      <input type="radio" name="option" value="new" [(ngModel)]="selectedOption" />
+      Ingresar nuevo método de pago
+    </label>
+  </div>
+
+  <div *ngIf="selectedOption === 'saved'" class="saved-payment-list">
+    <h3>Métodos guardados</h3>
+    <ul>
+      <li *ngFor="let p of savedPayments">
+        {{ p.cardNumber }} - {{ p.owner }} - {{ p.expirationDate }}
+        <button (click)="confirmarCompra()">Pagar con este</button>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="selectedOption === 'new'" class="new-payment-form">
+    <h3>Nuevo método</h3>
+    <form (ngSubmit)="confirmarCompra()" *ngIf="selectedOption === 'new'">
+      <input type="text" placeholder="Número de tarjeta" [(ngModel)]="newPayment.cardNumber" name="cardNumber" required />
+      <input type="text" placeholder="Nombre del dueño" [(ngModel)]="newPayment.ownerName" name="ownerName" required />
+      <input type="text" placeholder="Fecha de vencimiento (MM/AA)" [(ngModel)]="newPayment.expirationDate" name="expirationDate" required />
+      <input type="text" placeholder="CVV" [(ngModel)]="newPayment.cvv" name="cvv" required />
+      <button type="submit" [disabled]="!isFormValid()">Confirmar compra</button>
+    </form>
+  </div>
+</div>

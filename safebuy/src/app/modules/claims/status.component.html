@@ -1,18 +1,18 @@
-<div class="claims-container">
+<div class="claim-status-container">
   <h2>Reclamos recibidos</h2>
 
   <div *ngFor="let claim of claims" class="claim-card">
-    <p><strong>🧑 Usuario:</strong> {{ claim.buyer.name }}</p>
-    <p><strong>📧 Correo:</strong> {{ claim.buyer.email }}</p>
-    <p><strong>📞 Teléfono:</strong> {{ claim.buyer.phone }}</p>
-    <p><strong>📦 Producto:</strong> {{ claim.product }}</p>
-    <p><strong>🗓️ Fecha de compra:</strong> {{ claim.date }}</p>
-    <p><strong>🔎 Estado:</strong>
-      <span [ngClass]="{
-        'revisado': claim.state === 'Revisado',
-        'no-revisado': claim.state === 'No revisado',
-        'solucionado': claim.state === 'Solucionado'
-      }">{{ claim.state }}</span>
-    </p>
+    <p><strong>Usuario:</strong> {{ claim.user }}</p>
+    <p><strong>Contacto:</strong> {{ claim.contact }}</p>
+    <p><strong>Orden:</strong> {{ claim.orderId }}</p>
+    <p><strong>Motivo del reclamo:</strong> {{ claim.reason }}</p>
+    <p><strong>Estado actual:</strong> {{ claim.status }}</p>
+
+    <label for="statusSelect">Cambiar estado:</label>
+    <select [(ngModel)]="claim.status" (change)="updateStatus(claim)">
+      <option value="No revisado">No revisado</option>
+      <option value="Revisado">Revisado</option>
+      <option value="Solucionado">Solucionado</option>
+    </select>
   </div>
 </div>

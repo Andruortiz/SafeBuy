@@ -1,27 +1,37 @@
-.claims-container {
-  max-width: 800px;
-  margin: auto;
+.claim-status-container {
   padding: 2rem;
   color: #f1f1f1;
 }
 
-.claim-card {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
+h2 {
+  color: #f06292; // Título cálido
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.1);
+  text-align: center;
 }
 
-.revisado {
-  color: orange;
+.claim-card {
+  background-color: #2c2c2c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 1rem auto;
+  max-width: 800px;
+  border-left: 6px solid #f06292;
 }
 
-.no-revisado {
-  color: red;
+.claim-card p {
+  margin: 0.5rem 0;
 }
 
-.solucionado {
-  color: green;
+.claim-card strong {
+  color: #e91e63;
+}
+
+select {
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #444;
+  color: white;
 }
