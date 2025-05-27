@@ -1,0 +1,24 @@
+.claims-container {
+  padding: 2rem;
+  color: white;
+
+  h2 {
+    color: #ff2e7e;
+    margin-bottom: 1rem;
+  }
+
+  .claim-card {
+    background: #1f1f1f;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+    h3 {
+      color: #ff2e7e;
+    }
+
+    p {
+      margin: 0.3rem 0;
+    }
+  }
+}

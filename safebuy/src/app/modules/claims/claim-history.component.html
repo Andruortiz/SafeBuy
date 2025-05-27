@@ -1,0 +1,18 @@
+<div class="claim-history-container">
+  <h2>Historial de reclamos</h2>
+
+  <div class="claim-card" *ngFor="let claim of userClaims">
+    <p><strong>Producto:</strong> {{ claim.product }}</p>
+    <p><strong>Motivo:</strong> {{ claim.reason }}</p>
+    <p><strong>Descripción:</strong> {{ claim.description }}</p>
+    <p><strong>Fecha:</strong> {{ claim.date }}</p>
+    <p><strong>Estado:</strong>
+      <span [ngSwitch]="claim.status">
+        <span *ngSwitchCase="'no revisado'">❌ No revisado</span>
+        <span *ngSwitchCase="'revisado'">🟡 Revisado</span>
+        <span *ngSwitchCase="'solucionado'">✅ Solucionado</span>
+        <span *ngSwitchDefault>❓ Desconocido</span>
+      </span>
+    </p>
+  </div>
+</div>

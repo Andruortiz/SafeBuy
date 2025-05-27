@@ -1,0 +1,10 @@
+<div class="claims-container">
+  <h2>Mis Reclamos</h2>
+
+  <div *ngFor="let claim of myClaims" class="claim-card">
+    <h3>{{ claim.order }}</h3>
+    <p><strong>Motivo:</strong> {{ claim.reason }}</p>
+    <p><strong>Estado:</strong> {{ claim.status }}</p>
+    <p><strong>Descripción:</strong> {{ claim.description }}</p>
+  </div>
+</div>

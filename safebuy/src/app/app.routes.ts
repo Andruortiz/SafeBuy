@@ -13,6 +13,10 @@ import { StatusComponent } from './modules/claims/status.component';
 import { ProductDetailComponent } from './modules/shop/product-detail.component';
 import { CheckoutComponent } from './modules/shop/checkout.component';
 import { CreateComponent } from './modules/claims/create.component';
+import { MyClaimsComponent } from './modules/claims/my-claims.component';
+import { ClaimHistoryComponent } from './modules/claims/claim-history.component';
+
+
 
 export const routes: Routes = [
   { path: '', component: ProductListComponent },
@@ -30,5 +34,7 @@ export const routes: Routes = [
   { path: 'product/:id', component: ProductDetailComponent },
   { path: 'shop/checkout', component: CheckoutComponent },
   { path: 'claims/create', component: CreateComponent },
+  { path: 'profile/my-claims', component: MyClaimsComponent },
+  { path: 'claims/history', component: ClaimHistoryComponent },
 ];
 

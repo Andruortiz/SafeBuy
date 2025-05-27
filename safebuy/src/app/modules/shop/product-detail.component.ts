@@ -28,6 +28,9 @@ export class ProductDetailComponent {
   }
 
   goToCheckout() {
-    this.router.navigateByUrl('/shop/checkout');
+    this.router.navigate(['/shop/checkout'], {
+      queryParams: { productId: this.product.id }
+    });
   }
+
 }
