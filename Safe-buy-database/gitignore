@@ -1,0 +1,22 @@
+# Archivos temporales y de entorno
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Archivos generados automáticamente
+update_longitudes_only.sql
+*.sql~ 
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Archivos de respaldo
+*~
