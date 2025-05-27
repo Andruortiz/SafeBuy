@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/safebuy-backend/out/production" />
+    <output-test url="file://$MODULE_DIR$/safebuy-backend/out/test" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/safebuy-backend/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/safebuy-backend/src/test/java" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/safebuy-backend/target" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
