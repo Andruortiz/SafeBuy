@@ -22,12 +22,43 @@
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(255, 0, 150, 0.1);
+  text-align: center;
 
   h3 {
     color: #ff4081;
+    margin-bottom: 0.5rem;
   }
 
   p {
     color: #ccc;
+    font-size: 0.9rem;
+  }
+
+  img.product-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+  }
+
+  .actions {
+    margin-top: 1rem;
+
+    button {
+      background-color: #ff2e7e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      margin: 0 0.3rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #e91e63;
+      }
+    }
   }
 }

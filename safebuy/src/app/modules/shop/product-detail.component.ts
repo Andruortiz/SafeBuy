@@ -17,7 +17,7 @@ export class ProductDetailComponent {
       id: 1,
       title: 'Computador AsusROG',
       price: 2499000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://m.media-amazon.com/images/I/71tYh2Hz+HL._AC_SL1500_.jpg',
       description: 'Portátil de alto rendimiento ideal para gamers.',
       quantity: 5
     },
@@ -25,7 +25,7 @@ export class ProductDetailComponent {
       id: 2,
       title: 'Celular Samsung Galaxy zFlip',
       price: 4639000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://m.media-amazon.com/images/I/71pT7xjRz-L._AC_SL1500_.jpg',
       description: 'Teléfono plegable de última generación.',
       quantity: 3
     },
@@ -33,7 +33,7 @@ export class ProductDetailComponent {
       id: 3,
       title: 'Silla de escritorio Ejecutiva',
       price: 304900,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://m.media-amazon.com/images/I/61N9z4lKSDL._AC_SL1500_.jpg',
       description: 'Silla ergonómica para oficina o estudio.',
       quantity: 8
     },
@@ -41,7 +41,7 @@ export class ProductDetailComponent {
       id: 4,
       title: 'iPhone 15',
       price: 6299000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://m.media-amazon.com/images/I/81CgtwSII3L._AC_SL1500_.jpg',
       description: 'Último modelo de iPhone con cámaras avanzadas.',
       quantity: 4
     },
@@ -49,7 +49,7 @@ export class ProductDetailComponent {
       id: 5,
       title: 'Computador Lenovo Legion',
       price: 4259000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://m.media-amazon.com/images/I/61Tj5pKVVcL._AC_SL1500_.jpg',
       description: 'Laptop potente para gaming y tareas intensivas.',
       quantity: 6
     }

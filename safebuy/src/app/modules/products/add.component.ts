@@ -48,9 +48,16 @@ export class AddComponent {
 
   addProduct(): void {
     if (this.isValidForm()) {
+      const userEmail = localStorage.getItem('user') || '';
+      const newProduct = {
+        ...this.product,
+        sellerEmail: userEmail // ✅ esto lo conecta con "Mis productos"
+      };
+
       const savedProducts = JSON.parse(localStorage.getItem('products') || '[]');
-      savedProducts.push(this.product);
+      savedProducts.push(newProduct);
       localStorage.setItem('products', JSON.stringify(savedProducts));
+
       alert('Producto agregado con éxito');
       this.product = {
         title: '',
