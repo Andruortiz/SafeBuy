@@ -2,12 +2,14 @@ package com.safebuy.safebuy_backend.entity;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 public class DireccionEntrega {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private String direccion;
     private String referencia;
@@ -26,7 +28,7 @@ public class DireccionEntrega {
         this.ciudad = ciudad;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

@@ -3,13 +3,14 @@ package com.safebuy.safebuy_backend.entity;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 public class Comprador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     // Relación con Compra
     @OneToMany(mappedBy = "comprador", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -23,7 +24,7 @@ public class Comprador {
         this.compras = compras;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

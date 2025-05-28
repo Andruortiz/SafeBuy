@@ -11,16 +11,16 @@ public class Verificador {
     private UUID id;
 
     @Column(nullable = false, unique = true)
-    private String keyDeliveryRecepcion;
+    private UUID keyDeliveryRecepcion;
 
     @Column(nullable = false, unique = true)
-    private String keyDeliveryEntrega;
+    private UUID keyDeliveryEntrega;
 
     @Column(nullable = false)
-    private String keyVendedor;
+    private UUID keyVendedor;
 
     @Column(nullable = false)
-    private String keyComprador;
+    private UUID keyComprador;
 
     @Column(nullable = false)
     private String estado;  // Aprobada / No aprobada
@@ -36,7 +36,7 @@ public class Verificador {
         this.estado = "No aprobada";
     }
 
-    public Verificador(String keyDeliveryRecepcion, String keyDeliveryEntrega, String keyVendedor, String keyComprador, Pago pago) {
+    public Verificador(UUID keyDeliveryRecepcion, UUID keyDeliveryEntrega, UUID keyVendedor, UUID keyComprador, Pago pago) {
         this.keyDeliveryRecepcion = keyDeliveryRecepcion;
         this.keyDeliveryEntrega = keyDeliveryEntrega;
         this.keyVendedor = keyVendedor;

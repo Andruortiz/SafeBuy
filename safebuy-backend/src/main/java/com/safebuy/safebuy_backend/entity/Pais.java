@@ -2,11 +2,13 @@ package com.safebuy.safebuy_backend.entity;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 public class Pais {
 
     @Id
-    private String id;
+    private UUID id;
 
     @Column(nullable = false)
     private String nombrePais;
@@ -22,14 +24,14 @@ public class Pais {
     private String activoTransaccion;
 
     public Pais() {
-        this.id = java.util.UUID.randomUUID().toString();
+        this.id = UUID.fromString(UUID.randomUUID().toString());
         this.nombrePais = "";
         this.codigoISO = "";
         this.activoTransaccion = "no confirmado";
         this.moneda = new Moneda();
     }
 
-    public Pais(String id, String nombrePais, String codigoISO, Moneda moneda, String activoTransaccion) {
+    public Pais(UUID id, String nombrePais, String codigoISO, Moneda moneda, String activoTransaccion) {
         this.id = id;
         this.nombrePais = nombrePais;
         this.codigoISO = codigoISO;
@@ -37,7 +39,7 @@ public class Pais {
         this.activoTransaccion = activoTransaccion;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 

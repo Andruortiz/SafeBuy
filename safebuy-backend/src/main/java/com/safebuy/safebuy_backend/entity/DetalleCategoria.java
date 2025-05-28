@@ -1,44 +1,44 @@
 package com.safebuy.safebuy_backend.entity;
 
 import jakarta.persistence.*;
+import java.util.UUID;
 
 @Entity
 public class DetalleCategoria {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
+    private UUID id;
 
-    private String descripcion;
-    private String condiciones;
+    private String descripcionProducto;
+    private String subcategoria;
 
     public DetalleCategoria() {
-        this.descripcion = "";
-        this.condiciones = "";
+        this.descripcionProducto = "";
+        this.subcategoria = "";
     }
 
-    public DetalleCategoria(String descripcion, String condiciones) {
-        this.descripcion = descripcion;
-        this.condiciones = condiciones;
-    }
-
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public String getDescripcionProducto() {
+        return descripcionProducto;
     }
 
-    public String getCondiciones() {
-        return condiciones;
+    public void setDescripcionProducto(String descripcionProducto) {
+        this.descripcionProducto = descripcionProducto;
     }
 
-    public void setCondiciones(String condiciones) {
-        this.condiciones = condiciones;
+    public String getSubcategoria() {
+        return subcategoria;
+    }
+
+    public void setSubcategoria(String subcategoria) {
+        this.subcategoria = subcategoria;
     }
 }

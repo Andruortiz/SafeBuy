@@ -3,13 +3,14 @@ package com.safebuy.safebuy_backend.entity;
 import jakarta.persistence.*;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.UUID;
 
 @Entity
 public class Categoria {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
+    private UUID id;
 
     private String nombre;
 
@@ -30,8 +31,12 @@ public class Categoria {
         this.productos = productos;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getNombre() {

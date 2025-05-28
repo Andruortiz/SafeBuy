@@ -1,10 +1,12 @@
 package com.safebuy.safebuy_backend.dto;
 
+import java.util.UUID;
+
 public class ProductoDTO {
-    private Long id;
+    private UUID id;
     private String nombre;
     private String descripcion;
-    private Long precioId;
-    private Long vendedorId;
-    private Long categoriaId;
+    private UUID precioId;
+    private UUID vendedorId;
+    private UUID categoriaId;
 }

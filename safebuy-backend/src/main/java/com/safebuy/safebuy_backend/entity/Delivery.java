@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 public class Delivery {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     private LocalDate fechaEnvio;
 
@@ -27,7 +28,7 @@ public class Delivery {
         this.detalle = detalle;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
