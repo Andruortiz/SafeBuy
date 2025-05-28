@@ -15,12 +15,11 @@ export class ProductListComponent {
   searchTerm = '';
 
   products = [
-    { id: 1, name: 'Producto 1', price: 100, image: 'https://via.placeholder.com/150' },
-    { id: 2, name: 'Producto 2', price: 150, image: 'https://via.placeholder.com/150' },
-    { id: 3, name: 'Producto 3', price: 200, image: 'https://via.placeholder.com/150' },
-    { id: 4, name: 'Producto 4', price: 250, image: 'https://via.placeholder.com/150' },
-    { id: 5, name: 'Producto 5', price: 300, image: 'https://via.placeholder.com/150' },
-    { id: 6, name: 'Producto 6', price: 350, image: 'https://via.placeholder.com/150' },
+    { id: 1, name: 'Computador AsusROG', price: 2499000, image: 'https://via.placeholder.com/150' },
+    { id: 2, name: 'Celular Samsung Galaxy zFlip', price: 4639000, image: 'https://via.placeholder.com/150' },
+    { id: 3, name: 'Silla de escritorio Ejecutiva', price: 304900, image: 'https://via.placeholder.com/150' },
+    { id: 4, name: 'iPhone 15', price: 6299000, image: 'https://via.placeholder.com/150' },
+    { id: 5, name: 'Computador Lenovo Legion', price: 4259000, image: 'https://via.placeholder.com/150' }
   ];
 
   constructor(public auth: AuthService, private router: Router) {}

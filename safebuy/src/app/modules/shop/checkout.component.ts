@@ -35,11 +35,55 @@ export class CheckoutComponent {
 
   constructor(private route: ActivatedRoute) {
     const id = Number(this.route.snapshot.queryParamMap.get('productId'));
+
     const mockProducts = [
-      { id: 1, title: 'Producto 1', description: 'Descripción 1', image: 'https://via.placeholder.com/150', price: 100, quantity: 10 },
-      { id: 2, title: 'Producto 2', description: 'Descripción 2', image: 'https://via.placeholder.com/150', price: 200, quantity: 5 }
+      {
+        id: 1,
+        title: 'Computador AsusROG',
+        price: 4999000,
+        image: 'https://via.placeholder.com/150',
+        description: 'Portátil de alto rendimiento ideal para gamers.',
+        quantity: 5
+      },
+      {
+        id: 2,
+        title: 'Celular Samsung Galaxy zFlip',
+        price: 4399000,
+        image: 'https://via.placeholder.com/150',
+        description: 'Teléfono plegable de última generación.',
+        quantity: 3
+      },
+      {
+        id: 3,
+        title: 'Silla de escritorio Ejecutiva',
+        price: 899000,
+        image: 'https://via.placeholder.com/150',
+        description: 'Silla ergonómica para oficina o estudio.',
+        quantity: 8
+      },
+      {
+        id: 4,
+        title: 'iPhone 15',
+        price: 6299000,
+        image: 'https://via.placeholder.com/150',
+        description: 'Último modelo de iPhone con cámaras avanzadas.',
+        quantity: 4
+      },
+      {
+        id: 5,
+        title: 'Computador Lenovo Legion',
+        price: 5799000,
+        image: 'https://via.placeholder.com/150',
+        description: 'Laptop potente para gaming y tareas intensivas.',
+        quantity: 6
+      }
     ];
+
     this.product = mockProducts.find(p => p.id === id);
+  }
+
+  get totalPrice(): number {
+    return this.product ? this.quantity * this.product.price : 0;
   }
 
   selectPayment(method: any) {
@@ -48,7 +92,7 @@ export class CheckoutComponent {
 
   confirmPurchase() {
     const address = this.addressOption === 'saved' ? this.selectedAddress : this.newAddress;
-    alert(`Compra confirmada del producto "${this.product.title}" con cantidad ${this.quantity} y entrega en "${address}"`);
+    alert(`Compra confirmada del producto "${this.product.title}" x${this.quantity} por $${this.totalPrice.toLocaleString()} a entregar en "${address}"`);
   }
 
   canPurchase(): boolean {
